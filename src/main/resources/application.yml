@@ -1,0 +1,26 @@
+spring:
+  graphql:
+    graphiql:
+      enabled: true
+    schema:
+      printer:
+        enabled: true
+  application:
+    name: remona-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3307/remona?allowPublicKeyRetrieval=true&useUnicode=true&useSSL=false&serverTimezone=Asia/Seoul
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+        highlight_sql: true
+        default_batch_fetch_size: 1000
+        use_sql_comments: true
+logging:
+  level:
+    com.study.member.feign: DEBUG
